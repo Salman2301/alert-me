@@ -4,3 +4,8 @@
 New Feature:
   ☐ Save the Alert and show multple save and retrive old alerts
   ☐ Import my old alerts here?
+  ☐ Custom Alert popup
+  ☐ clear Interval causing memory leak everytime the store value changes check .subscribe for more
+
+Bug:
+  ☐ Losing Initial Few seconds

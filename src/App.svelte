@@ -1,6 +1,7 @@
 <script>	
 	import NewAlert from "./component/NewAlert.svelte";
-	import ShowAlert from "./component/ShowAlert.svelte"
+	import ShowAlert from "./component/ShowAlert.svelte";
+	import AlertBox from "./component/pop/AlertBox.svelte";
 	// set one alert
 	// set the message and interval
 	// Start and stop that alert
@@ -14,7 +15,7 @@
 </svelte:head>
 
 <ShowAlert />
-
+<AlertBox />
 <!-- <div class="newAlert"> -->
 	<NewAlert />
 <!-- </div> -->

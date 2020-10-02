@@ -1,7 +1,7 @@
 <script>
   import HourTime from "./HourTime.svelte";
   import MinTim from "./MinTime.svelte";
-  import { message, nextAlert, createdAt, stop } from "../store.js";
+  import { message, nextAlert, createdAt, stop, interval } from "../store.js";
 
   let hour = 0;
   let min = 5;
@@ -9,11 +9,15 @@
   let isAddOrUpdateAlert = false;
 
   const onSubmit = e => {
+    clearInterval($interval);
+    $stop = true;
     const today = new Date();
     today.setHours( today.getHours() + hour, today.getMinutes() + min, 0, 0);
     $nextAlert = today;
     $message = newMessage;
     $createdAt = new Date();
+    const timeleft = $createdAt - $nextAlert;
+    // console.log({ nextAlert: $nextAlert , today: new Date(), interval: $interval })
     $stop = false;
   }
 
