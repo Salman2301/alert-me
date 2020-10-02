@@ -6,6 +6,8 @@
   let hour = 0;
   let min = 5;
   let newMessage = "";
+  let isAddOrUpdateAlert = false;
+
   const onSubmit = e => {
     const today = new Date();
     today.setHours( today.getHours() + hour, today.getMinutes() + min, 0, 0);
@@ -15,20 +17,33 @@
     $stop = false;
   }
 
+  function toggleNewAlert() {
+    isAddOrUpdateAlert = !isAddOrUpdateAlert
+  }
+
 </script>
 
-<h1>Add or Update Alert</h1>
-<input type="message" placeholder="Alert me for..." id="message" bind:value={newMessage} >
-<p class="interval">Select an interval:</p>
-<div class="time">
-  <HourTime bind:value={hour}/>
-  <MinTim bind:value={min}/>
+<div class="newAlert">
+  <button class="newAlertBtn" on:click={toggleNewAlert}>Toggle New Alert</button>
+{#if isAddOrUpdateAlert}
+  <div class="editAlert">
+
+    <h1>Add or Update Alert</h1>
+    <input type="message" placeholder="Alert me for..." id="message" bind:value={newMessage} >
+    <p class="interval">Select an interval:</p>
+    <div class="time">
+      <HourTime bind:value={hour}/>
+      <MinTim bind:value={min}/>
+    </div>
+    <button class="submitBtn" type="button" on:click={onSubmit} >Alert</button>
+
+  </div>
+{/if}
 </div>
-<button type="button" on:click={onSubmit} >Alert</button>
 
 <style>
 #message {
-  width: 310px;
+  width: 300px;
 }
 .interval {
   color: #676767;
@@ -36,7 +51,7 @@
   font-weight: 600;
 }
 .time {
-  width: 310px;
+  width: 300px;
   display: flex;
 }
 </style>

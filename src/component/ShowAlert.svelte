@@ -4,7 +4,7 @@
 </script>
 
 {#if !$stop }
-  <h1 class="title">Upcoming Alert in</h1>
+  <h1 class="title">Upcoming Alert In </h1>
   <div class="alert">
     <Timer />
     

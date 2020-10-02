@@ -9,7 +9,7 @@
   
   function initTimer() {
     clearInterval(interval);
-    interval = setInterval(()=>{
+    interval = setInterval(async ()=>{
       timeString = "";
 
       const total = Date.parse($nextAlert) - Date.parse(new Date());
@@ -27,7 +27,7 @@
       timeString += ` ${ seconds }s`;
       
       if( total <= 0) {
-        playAlert();
+        await playAlert();
         clearInterval(interval);
         alert(`Are you still doing this task?: ${ $message }`);
       }

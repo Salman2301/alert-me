@@ -15,16 +15,16 @@
 
 <ShowAlert />
 
-<div class="newAlert">
+<!-- <div class="newAlert"> -->
 	<NewAlert />
-</div>
+<!-- </div> -->
 
 <style>
 	:global(h1) {
 		font-family: "Roboto", Arial, Helvetica, sans-serif;
     font-weight: 400;
 	}
-	.newAlert {
+	/* .newAlert {
 		margin-top: 100px;
-	}
+	} */
 </style>

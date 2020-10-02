@@ -14,10 +14,10 @@
 
 <style>
   .dropdown {
-    width: 150px;
+    width: 140px;
     margin-right: 10px;
   }
   #hours {
-    width: 150px;
+    width: 140px;
   }
 </style>
