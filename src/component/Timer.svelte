@@ -1,7 +1,6 @@
 <script>
   import { createdAt, nextAlert, message } from "../store";
-
-  const audio = new Audio('sound/beep.mp3');
+  import { playAlert } from "../utils.js";
 
   let timeString = "loading";
   let interval;
@@ -28,11 +27,10 @@
       timeString += ` ${ seconds }s`;
       
       if( total <= 0) {
-        audio.play();
+        playAlert();
         clearInterval(interval);
         alert(`Are you still doing this task?: ${ $message }`);
       }
-      console.log(1)
     }, 500)
   }
 
@@ -44,10 +42,17 @@
 </script>
 
 
-<h1>{timeString}</h1>
+<h1 class="timer">{timeString}</h1>
 
 <style>
   h1 {
     font-size: 3em;
+    color: white !important;
   }
+  
+.timer {
+  color: white;
+}
+
+
 </style>
