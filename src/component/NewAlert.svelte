@@ -22,6 +22,21 @@
     toggleNewAlert();
   }
 
+  function selectTextOnFocus(node) {
+    
+    const handleFocus = event => {
+      node && typeof node.select === 'function' && node.select()
+    }
+    
+    node.addEventListener('focus', handleFocus)
+    
+    return {
+      destroy() {
+        node.removeEventListener('focus', handleFocus)
+      }
+    }
+  }
+
   function toggleNewAlert() {
     isAddOrUpdateAlert = !isAddOrUpdateAlert
   }
@@ -34,7 +49,7 @@
   <div class="editAlert">
 
     <h1>Add or Update Alert</h1>
-    <input type="message" placeholder="Alert me for..." id="message" bind:value={newMessage} >
+    <input type="message" placeholder="Alert me for..." id="message" bind:value={newMessage} use:selectTextOnFocus >
     <p class="interval">Select an interval:</p>
     <div class="time">
       <HourTime bind:value={hour}/>

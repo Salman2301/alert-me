@@ -1,7 +1,7 @@
 <script>
   export let value;
   
-  const mins = [ "" ]
+  const mins = [ ]
   // run for every 5 mins
   const inc = 5;
   for (let i = 0; i <= 60; i+=inc) mins.push(i);

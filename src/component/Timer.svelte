@@ -4,6 +4,8 @@
   import { nextAlert, stop, interval, timeString, alertBox, currentTime } from "../store";
   import { playAlert } from "../utils.js";
 
+  $: isLessThanMin = $timeString && $timeString.total < 1000*60;
+
   onMount(()=>{
     clearInterval($interval);
     initTimer($nextAlert);
@@ -45,17 +47,21 @@
 </script>
 
 {#if !$stop }
-  <h1 class="timer">{$timeString.string}</h1>
+  <h1 class="timer" class:isRed={isLessThanMin} >{$timeString.string}</h1>
 {/if}
 
 <style>
   h1 {
-    font-size: 3em;
+    font-size: 6em;
     color: white !important;
   }
   
   .timer {
     color: white;
+  }
+
+  .isRed {
+    color: red !important;
   }
 
 

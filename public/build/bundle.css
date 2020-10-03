@@ -4,7 +4,7 @@ h1{font-family:"Roboto", Arial, Helvetica, sans-serif;font-weight:400}
 #message.svelte-o2qpwt{width:300px}.interval.svelte-o2qpwt{color:#676767;margin-bottom:2px;font-weight:600}.time.svelte-o2qpwt{width:300px;display:flex}
 .message.svelte-1qxcc3n>p.svelte-1qxcc3n{font-size:22px}.title.svelte-1qxcc3n.svelte-1qxcc3n,.alert.svelte-1qxcc3n.svelte-1qxcc3n{text-align:center}.title.svelte-1qxcc3n.svelte-1qxcc3n{color:#b4b4b4
   }
-h1.svelte-1m45fl1{font-size:3em;color:white !important}.timer.svelte-1m45fl1{color:white}
+h1.svelte-1fofxpx{font-size:6em;color:white !important}.timer.svelte-1fofxpx{color:white}.isRed.svelte-1fofxpx{color:red !important}
 .overlay.svelte-l7yw22{min-width:100vw;min-height:100vh;margin:0;padding:0;position:absolute;top:0;left:0;z-index:100;overflow:hidden;background:rgba(0,0,0,0.22);justify-content:center;align-items:center}p.svelte-l7yw22{margin:0px 10px}.alert-box.svelte-l7yw22{margin:auto;margin-top:10%;width:500px;height:100px;border:1px solid red;background-color:black}.title.svelte-l7yw22{margin-left:10px;margin-top:10px;width:90%;display:flex;justify-content:space-between}.title-content.svelte-l7yw22{margin:-5px 5px;font-size:1.5em;font-weight:500;color:#bbb}.message.svelte-l7yw22{margin:5px}.close.svelte-l7yw22{position:relative;top:-10px;right:0px;left:40px;margin-left:25px;border:0;border-radius:0;width:25px;height:33px;background-color:red;font-size:0.7em;font-weight:600;cursor:pointer}
 
 /*# sourceMappingURL=bundle.css.map */
