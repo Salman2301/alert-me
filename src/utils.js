@@ -7,8 +7,7 @@ export function playAlert() {
   return new Promise(res=>{
     audio.play();
     setTimeout(()=>{audio.play()}, 500);
-    setTimeout(()=>{audio.play()}, 1000);
-    setTimeout(()=>{audio.play()}, 1500);
-    setTimeout(()=>{res();}, 2000);
+    setTimeout(()=>{audio.play(); }, 1000);
+    setTimeout(()=>{audio.play();   res() }, 1200 );
   });
 }

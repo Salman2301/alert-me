@@ -19,6 +19,7 @@
     const timeleft = $createdAt - $nextAlert;
     // console.log({ nextAlert: $nextAlert , today: new Date(), interval: $interval })
     $stop = false;
+    toggleNewAlert();
   }
 
   function toggleNewAlert() {
