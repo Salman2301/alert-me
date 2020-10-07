@@ -11,3 +11,12 @@ New Feature:
 
 Bug:
   ☐ Losing Initial Few seconds
+
+Storing Data:
+  ☐ Browser database
+  ☐ External database
+  ☐ Google sheet
+
+Deploy:
+  ☐ AWS fargate
+  ☐ 
