@@ -19,7 +19,7 @@
   function initTimer() {
     clearInterval($interval);
     $interval = setInterval(async ()=>{
-      console.log("test leak")
+      // console.log("test leak")
       if( $timeString.total <= 0 ) {
         await playAlert()
         $alertBox = true;

@@ -8,6 +8,7 @@ New Feature:
   ☐ Import my old alerts here?
   ☐ Custom Alert popup
   ☐ clear Interval causing memory leak everytime the store value changes check .subscribe for more
+  ✔ Show the time on the title @done(20-10-10 08:07)
 
 Bug:
   ☐ Losing Initial Few seconds
